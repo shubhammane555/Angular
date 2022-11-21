@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/" />
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fluid-container">
+      <nav class="navbar navbar-dark bg-secondary">
+        <div>
+          <img src="{{ imageSrc }}" width="200" height="40" /> &nbsp;
+
+          <button class="btn btn-light btn-sm" (click)="fundpage()">
+            Fund Transfer
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <div class="" id="fundpage" *ngIf="showfund">
+      <div class="fluid-container">
+        <nav class="navbar navbar-dark bg-primary">
+          <h1 class="text-white">FUND TRANSFER</h1>
+        </nav>
+      </div>
+
+      <table id="customers">
+        <thead>
+          <th>Account No</th>
+          <th>Proceed</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HDFC0123</td>
+            <td><button (click)="userpage()">Transfer</button></td>
+          </tr>
+          <tr>
+            <td>HDFC456</td>
+            <td><button (click)="userpage()">Transfer</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="" id="userpage" *ngIf="showuser">
+      <!-- <div class="fluid-container">
+        <nav class="navbar navbar-dark bg-primary">
+          <div>
+            <h1 class="text-center">USER DETAILS</h1>
+          </div>
+        </nav>
+      </div> -->
+
+      <!-- <table id="customers">
+        <thead>
+          <th>Account No</th>
+          <th>IFSC Code</th>
+          <th>Amount</th>
+          <th>Procced</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" name="accno" /></td>
+            <td><input type="text" name="ifsc" /></td>
+            <td><input type="text" name="amt" /></td>
+            <td><button (click)="payment()">Pay</button></td>
+          </tr>
+        </tbody>
+      </table> -->
+      <main class="col-md-5 mx-auto mt-4">
+        <header class="text-center">
+          <h1 class="display-4 font-weight-bold">Fund Transfer</h1>
+          <h6 class="text-primary">Provide details</h6>
+        </header>
+        <hr />
+
+        <section>
+          <div class="border border-primary">
+            <form
+              action="register-backend"
+              method="GET"
+              class="font-weight-bold"
+            >
+              <!-- payment mode -->
+              <div id="paymentField" name="paymentField" class="form-group">
+                <label for="payment">Payment Mode:</label><br />
+                <div class="font-weight-normal" id="payment" name="payment">
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      name="payment"
+                      id="RTGS"
+                      value="RTGS"
+                    />
+                    <label for="RTGS" class="form-check-label">RTGS</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      name="payment"
+                      id="NEFT"
+                      value="NEFT"
+                    />
+                    <label for="NEFT" class="form-check-label">NEFT</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Person Name -->
+
+              <div id="nameField" name="nameField" class="form-group">
+                <label for="name"> Person Name* </label><br />
+                <input
+                  type="text"
+                  id="pn"
+                  name="pn"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <!-- Account No -->
+              <div id="name" name="name" class="form-group">
+                <div id="ACNoField" name="ACNoField ">
+                  <label for="acno">Account No*</label><br />
+                  <input
+                    type="number"
+                    id="fname"
+                    name="fname"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div id="ifscField" name="ifscField" class="form-group">
+                  <label for="ifsc"> IFSC Code* </label><br />
+                  <input
+                    type="text"
+                    id="ifsc"
+                    name="ifsc"
+                    class="form-control"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- amount -->
+              <div id="amtField" name="amtField" class="form-group">
+                <label for="amt">Amount*</label><br />
+                <input
+                  type="number"
+                  id="amt"
+                  name="amt"
+                  class="form-control"
+                  placeholder="Enter Amount"
+                  required
+                />
+              </div>
+
+              <!-- Submit Button -->
+              <div id="registrationButton">
+                <input
+                  type="registration"
+                  value="Transfer"
+                  class="btn btn-block btn-primary my-4"
+                  (click)="payment()"
+                />
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="" id="userpage" *ngIf="showpayment">
+      <h1 class="text-center">Payment succesfully done</h1>
+    </div>
+  </body>
+</html>

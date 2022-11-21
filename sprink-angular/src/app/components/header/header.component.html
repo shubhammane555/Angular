@@ -1,0 +1,101 @@
+<p>header works!</p>
+<div class="header mb-5 mb-sm-5">
+  <nav
+    class="navbar navbar-expand-md navbar-light p-0 p-md-1 fixed-top bg-white"
+  >
+    <a
+      href="#"
+      class="navbar-toggler border-0 d-md-none"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </a>
+    <div class="mx-auto">
+      <a class="navbar-brand d-md-none" routerLink="/homepage">
+        <img
+          src="/sprink-angular/a.png"
+          routerLink="/homepage"
+          class="mb-1"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <a routerLink="/homepage">
+        <img
+          src="https://d3ljlx3hzhder.cloudfront.net/sprink/b2c_assets/images/logo.png"
+          class="img-responsive mb-2 ml-2 d-none d-md-block"
+          alt=""
+        />
+      </a>
+      <ul class="navbar-nav ml-auto text-dark dropdown">
+        <li class="nav-item d-none d-md-block">
+          <a class="nav-link text-dark" [routerLink]="'about-us'"
+            >about spring</a
+          >
+        </li>
+        <li class="nav-item d-none d-md-block">
+          <a class="nav-link text-dark" [routerLink]="'view-Menu'">View Menu</a>
+        </li>
+        <li class="nav-item d-none d-md-block">
+          <a class="nav-link text-dark" [routerLink]="'trial-meal'"
+            >Trial Meals</a
+          >
+        </li>
+
+        <li class="nav-item bg-light d-md-none">
+          <a class="nav-link text-dark ml-4" href="/week_menu">View Menu</a>
+        </li>
+        <li class="nav-item bg-light d-md-none">
+          <a class="nav-link text-dark ml-4" href="/trial_home/o1xa5b"
+            >Trial Meals</a
+          >
+        </li>
+        <li class="nav-item bg-light d-md-none">
+          <a class="nav-link text-dark ml-4" href="/food_summary"
+            >Start Subscription</a
+          >
+        </li>
+        <li class="nav-item bg-light d-md-none">
+          <a class="nav-link text-dark ml-4" href="/about-us">About Sprink</a>
+        </li>
+
+        <li class="nav-item bg-light d-md-none">
+          <a class="nav-link text-dark ml-4" [routerLink]="'contact-us'"
+            >Contact us</a
+          >
+        </li>
+
+        <li class="nav-item bg-light d-md-none">
+          <a class="nav-link text-dark ml-4" [routerLink]="'signin'">Sign in</a>
+        </li>
+        <li class="nav-item d-none d-md-block">
+          <a
+            class="nav-link"
+            href="/login"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+          >
+            <span class="navbar-toggler-icon ml-2 cursor-pointer"></span>
+          </a>
+          <div class="dropdown-menu pt-0 form-control dropdown-menu-right mt-1">
+            <a href="/food_summary" class="dropdown-item bg-light"
+              >Start Subscription</a
+            >
+            <a class="dropdown-item bg-light" [routerLink]="'contact-us'"
+              >Contact us</a
+            >
+            <a [routerLink]="'signin'" class="dropdown-item pb-2 bg-light"
+              >Sign in</a
+            >
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,62 @@
+<p>contact-detail works!</p>
+<!-- <div class="trm-contacts-detail">
+  <mat-card>
+    <mat-card-title-group class="fullBleed">
+      <img mat-card-md-image src="{{ data.contact.Image }}" />
+      <mat-card-title>{{ this.data.contact.firstname }}</mat-card-title>
+      <mat-card-subtitle>INSERT_CONTACT_EMAIL</mat-card-subtitle>
+    </mat-card-title-group>
+    <mat-card-content>
+      <dl>
+        <dt>ID:</dt>
+        <dd>{{ this.data.contact.id }}</dd>
+
+        <dt>Street:</dt>
+        <dd>{{ this.data.contact.street }}</dd>
+        <dt>Zip:</dt>
+        <dd>{{ this.data.contact.zip }}</dd>
+        <dt>City:</dt>
+        <dd>{{ this.data.contact.zip }}</dd>
+      </dl>
+    </mat-card-content>
+    <mat-card-actions fxLayout fxLayoutAlign="center center">
+      <a mat-button title="Go back to list">Go Back</a>
+    </mat-card-actions>
+  </mat-card>
+</div>
+{{ data.contact | json }} -->
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title
+      >{{ contact.firstname }} {{ contact.lastname }}</mat-card-title
+    >
+    <mat-card-subtitle>Full Stack Devloper</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{ contact.Image }}" />
+  <mat-card-content>
+    <dl>
+      <dt>ID:</dt>
+      <dd>{{ contact.id }}</dd>
+
+      <dt>Street:</dt>
+      <dd>{{ contact.street }}</dd>
+      <dt>Zip:</dt>
+      <dd>{{ contact.zip }}</dd>
+      <dt>City:</dt>
+      <dd>{{ contact.city }}</dd>
+    </dl>
+    {{ contact | json }}
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+  <mat-card-actions fxLayout fxLayoutAlign="center center">
+    <a href="" mat-button title="Go back to list" class="btn btn-primary"
+      >Go Back</a
+    >
+    <button (click)="navigate()">Edit</button>
+  </mat-card-actions>
+</mat-card>

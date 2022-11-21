@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/" />
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fluid-container">
+      <nav class="navbar navbar-light" style="background-color: #ffffff">
+        <h3>FOOD EXPRESS</h3>
+        &nbsp;
+        <div class="side">
+          <button class="btn btn-light btn-sm" (click)="register()">
+            Register
+          </button>
+          &nbsp;
+
+          <button class="btn btn-light btn-sm" (click)="login()">Login</button>
+        </div>
+      </nav>
+    </div>
+
+    <div class="" id="userpage" *ngIf="showregi">
+      <main class="col-md-5 mx-auto mt-4">
+        <header class="text-center">
+          <h1 class="display-4 font-weight-bold">registration</h1>
+          <h6 class="text-primary">Provide details</h6>
+        </header>
+        <hr />
+
+        <section>
+          <div class="border border-primary">
+            <form
+              action="register-backend"
+              method="GET"
+              class="font-weight-bold"
+            >
+              <!-- Person Name -->
+
+              <div id="nameField" name="nameField" class="form-group">
+                <label for="name"> Person Name* </label><br />
+                <input
+                  type="text"
+                  id="pn"
+                  name="pn"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <!-- Email -->
+              <div id="emailField" name="emailField" class="form-group">
+                <label for="email">Email*</label><br />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="abc@xyz.com"
+                  required
+                />
+                <small id="emailFieldHelp" class="form-text text-muted"
+                  >Your email is safe with us</small
+                >
+              </div>
+
+              <!-- Password -->
+              <div id="passwordField" name="passwordField" class="form-group">
+                <label for="password">Password*</label><br />
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="form-control"
+                  placeholder="Type password"
+                  required
+                />
+                <small id="passwordHelp" class="form-text text-muted"
+                  ><ul style="padding: 0; list-style: inside">
+                    <li>Password should be between 8-16 characters</li>
+                    <li>
+                      Password should contain both lowercase and uppercase
+                      alphabets
+                    </li>
+                    <li>Password should contain at least one special symbol</li>
+                  </ul></small
+                >
+              </div>
+
+              <!-- Confirm Password -->
+              <div
+                id="confirmPasswordField"
+                name="confirmPasswordField"
+                class="form-group"
+              >
+                <label for="confirmPassword">Confirm Password*</label><br />
+                <input
+                  type="confirmPassword"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  class="form-control"
+                  placeholder="Re-type password"
+                  required
+                />
+              </div>
+
+              <!-- Submit Button -->
+              <div id="registrationButton">
+                <input
+                  type="registration"
+                  value="Register"
+                  class="btn btn-block btn-primary my-4"
+                  (click)="registration()"
+                />
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="" id="userpage" *ngIf="showlogin">
+      <main class="col-md-5 mx-auto mt-4">
+        <header class="text-center">
+          <h1 class="display-4 font-weight-bold">login</h1>
+          <h6 class="text-primary">Provide details</h6>
+        </header>
+        <hr />
+
+        <section>
+          <div class="border border-black">
+            <form
+              action="register-backend"
+              method="GET"
+              class="font-weight-bold"
+            >
+              <!-- Email -->
+              <div id="emailField" name="emailField" class="form-group">
+                <label for="email">Email*</label><br />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="abc@xyz.com"
+                  [(ngModel)]="email1"
+                />
+                <small id="emailFieldHelp" class="form-text text-muted"
+                  >Your email is safe with us</small
+                >
+              </div>
+
+              <!-- Password -->
+              <div id="passwordField" name="passwordField" class="form-group">
+                <label for="password">Password*</label><br />
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="form-control"
+                  placeholder="Type password"
+                  required
+                  [(ngModel)]="password"
+                />
+                <small id="passwordHelp" class="form-text text-muted"
+                  ><ul style="padding: 0; list-style: inside">
+                    <li>Password should be between 8-16 characters</li>
+                    <li>
+                      Password should contain both lowercase and uppercase
+                      alphabets
+                    </li>
+                    <li>Password should contain at least one special symbol</li>
+                  </ul></small
+                >
+              </div>
+
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="remember" /> Remember Me
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <div id="loginButton">
+                <input
+                  type="login"
+                  value="login"
+                  class="btn btn-primary"
+                  (click)="loged()"
+                />
+                <a href="#" class="btn btn-link" (click)="forget()">
+                  Forgot Your Password?
+                </a>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="" id="userpage" *ngIf="loginsucess">
+      <h1 class="text-center">Login succesfully</h1>
+    </div>
+
+    <div class="" id="userpage" *ngIf="regisucess">
+      <h1 class="text-center">registration completed succesfully</h1>
+    </div>
+
+    <div class="" id="userpage" *ngIf="passwordfail">
+      <h1 class="text-center">Incorrect email & password</h1>
+    </div>
+
+    <div class="" id="userpage" *ngIf="forgetpassword">
+      <main class="col-md-5 mx-auto mt-4">
+        <div class="border border-primary">
+          <form action="register-backend" method="GET" class="font-weight-bold">
+            <h4>Reset Password</h4>
+            <hr />
+
+            <!-- Email -->
+            <div id="emailField" name="emailField" class="form-group">
+              <label for="email">Email*</label><br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="abc@xyz.com"
+                [(ngModel)]="email1"
+              />
+            </div>
+            <!-- Submit Button -->
+            <div id="restButton">
+              <input
+                type="rest"
+                value="Send Password Reset Link"
+                class="btn btn-block btn-primary"
+              />
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+    <div class="" id="homepage" *ngIf="homepage">
+      <nav class="navbar navbar-light" style="background-color: #ffdead">
+        <div class="form-outline lg">
+          <input
+            type="search"
+            class="form-control"
+            id="datatable-search-input"
+            placeholder="Serach food items"
+          />
+        </div>
+        <div>
+          <button class="btn btn-light btn-sm">cart</button>&nbsp;
+          <button class="btn btn-light btn-sm">User</button>
+        </div>
+      </nav>
+      <div class="row">
+        <div class="col-3">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="{{ imageSrc }}"
+              width="250"
+              height="150"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h2 class="card-text">Tandoor Point</h2>
+              <p class="card-text">
+                Muglai ,North Indian,Chinse Restaurant |Rating:3.0 |INR 230
+              </p>
+              <p class="card-text">Chikan Tondoor</p>
+              <button class="btn btn-primary btn-sm">Add to Cart</button>&nbsp;
+              <button class="btn btn-primary btn-sm">Buy/Order</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- secand item -->
+        <div class="col-3">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="{{ imageSrc1 }}"
+              width="250"
+              height="150"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h2 class="card-text">Tandoor Point</h2>
+              <p class="card-text">
+                Muglai ,North Indian,Chinse Restaurant |Rating:3.0 |INR 230
+              </p>
+              <p class="card-text">Chikan Tondoor</p>
+              <button class="btn btn-primary btn-sm">Add to Cart</button>&nbsp;
+              <button class="btn btn-primary btn-sm">Buy/Order</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- third item -->
+        <div class="col-3">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="{{ imageSrc2 }}"
+              width="250"
+              height="150"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h2 class="card-text">Tandoor Point</h2>
+              <p class="card-text">
+                Muglai ,North Indian,Chinse Restaurant |Rating:3.0 |INR 230
+              </p>
+              <p class="card-text">Chikan Tondoor</p>
+              <button class="btn btn-primary btn-sm">Add to Cart</button>&nbsp;
+              <button class="btn btn-primary btn-sm">Buy/Order</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- forth item -->
+        <div class="col-3">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="{{ imageSrc3 }}"
+              width="250"
+              height="150"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h2 class="card-text">Tandoor Point</h2>
+              <p class="card-text">
+                Muglai ,North Indian,Chinse Restaurant |Rating:3.0 |INR 230
+              </p>
+              <p class="card-text">Chikan Tondoor</p>
+              <button class="btn btn-primary btn-sm">Add to Cart</button>&nbsp;
+              <button class="btn btn-primary btn-sm">Buy/Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

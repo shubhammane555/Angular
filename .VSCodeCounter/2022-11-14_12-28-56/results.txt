@@ -1,0 +1,73 @@
+Date : 2022-11-14 12:28:56
+Directory : c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app
+Total : 38 files,  1980 codes, 328 comments, 168 blanks, all 2476 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| HTML       |          9 |      1,573 |        328 |         55 |      1,956 |
+| TypeScript |         20 |        353 |          0 |        106 |        459 |
+| CSS        |          9 |         54 |          0 |          7 |         61 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                          | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                             |         38 |      1,980 |        328 |        168 |      2,476 |
+| components                                                                                                    |         32 |      1,882 |        328 |        147 |      2,357 |
+| components\about-us                                                                                           |          4 |         78 |        280 |         15 |        373 |
+| components\contact-us                                                                                         |          4 |        172 |          4 |         15 |        191 |
+| components\footer                                                                                             |          4 |        159 |          0 |         16 |        175 |
+| components\header                                                                                             |          4 |        122 |          0 |         16 |        138 |
+| components\homepage                                                                                           |          4 |        663 |         23 |         17 |        703 |
+| components\signin                                                                                             |          4 |        144 |          6 |         20 |        170 |
+| components\trial-meal                                                                                         |          4 |        420 |         14 |         33 |        467 |
+| components\view-menu                                                                                          |          4 |        124 |          1 |         15 |        140 |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                      | language   | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\app-routing.module.ts                              | TypeScript |         23 |          0 |          3 |         26 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\app.component.css                                  | CSS        |          0 |          0 |          1 |          1 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\app.component.html                                 | HTML       |          3 |          0 |          2 |          5 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\app.component.spec.ts                              | TypeScript |         31 |          0 |          5 |         36 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\app.component.ts                                   | TypeScript |          9 |          0 |          2 |         11 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\app.module.ts                                      | TypeScript |         32 |          0 |          8 |         40 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\about-us\about-us.component.css         | CSS        |          0 |          0 |          1 |          1 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\about-us\about-us.component.html        | HTML       |         49 |        280 |          3 |        332 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\about-us\about-us.component.spec.ts     | TypeScript |         18 |          0 |          6 |         24 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\about-us\about-us.component.ts          | TypeScript |         11 |          0 |          5 |         16 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\contact-us\contact-us.component.css     | CSS        |          4 |          0 |          1 |          5 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\contact-us\contact-us.component.html    | HTML       |        139 |          4 |          3 |        146 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\contact-us\contact-us.component.spec.ts | TypeScript |         18 |          0 |          6 |         24 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\contact-us\contact-us.component.ts      | TypeScript |         11 |          0 |          5 |         16 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\footer\footer.component.css             | CSS        |         14 |          0 |          2 |         16 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\footer\footer.component.html            | HTML       |        116 |          0 |          3 |        119 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\footer\footer.component.spec.ts         | TypeScript |         18 |          0 |          6 |         24 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\footer\footer.component.ts              | TypeScript |         11 |          0 |          5 |         16 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\header\header.component.css             | CSS        |          0 |          0 |          1 |          1 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\header\header.component.html            | HTML       |         93 |          0 |          4 |         97 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\header\header.component.spec.ts         | TypeScript |         18 |          0 |          6 |         24 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\header\header.component.ts              | TypeScript |         11 |          0 |          5 |         16 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\homepage\homepage.component.css         | CSS        |          7 |          0 |          0 |          7 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\homepage\homepage.component.html        | HTML       |        627 |         23 |          6 |        656 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\homepage\homepage.component.spec.ts     | TypeScript |         18 |          0 |          6 |         24 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\homepage\homepage.component.ts          | TypeScript |         11 |          0 |          5 |         16 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\signin\signin.component.css             | CSS        |          5 |          0 |          0 |          5 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\signin\signin.component.html            | HTML       |         99 |          6 |          8 |        113 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\signin\signin.component.spec.ts         | TypeScript |         18 |          0 |          6 |         24 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\signin\signin.component.ts              | TypeScript |         22 |          0 |          6 |         28 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\trial-meal\trial-meal.component.css     | CSS        |         21 |          0 |          1 |         22 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\trial-meal\trial-meal.component.html    | HTML       |        355 |         14 |         22 |        391 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\trial-meal\trial-meal.component.spec.ts | TypeScript |         18 |          0 |          6 |         24 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\trial-meal\trial-meal.component.ts      | TypeScript |         26 |          0 |          4 |         30 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\view-menu\view-menu.component.css       | CSS        |          3 |          0 |          0 |          3 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\view-menu\view-menu.component.html      | HTML       |         92 |          1 |          4 |         97 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\view-menu\view-menu.component.spec.ts   | TypeScript |         18 |          0 |          6 |         24 |
+| c:\Users\hp\Desktop\vs code\angular\sprink-angular\src\app\components\view-menu\view-menu.component.ts        | TypeScript |         11 |          0 |          5 |         16 |
+| Total                                                                                                         |            |      1,980 |        328 |        168 |      2,476 |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

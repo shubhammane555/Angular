@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="col-md-5 mx-auto mt-4">
+      <div class="border border-dark">
+        <header class="text-center">
+          <h1 class="display-4 text-primary text-Uppercase">
+            Log-In-Reactive Form
+          </h1>
+        </header>
+
+        <hr />
+        <section>
+          <form
+            [formGroup]="loginForm"
+            (ngsubmit)="saveData()"
+            method="GET"
+            class="font-weight-bold"
+          >
+            <!-- Name -->
+
+            <div id="name" name="name" class="form-group">
+              <label for="fname">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                autocomplete="off"
+                formControlName="name"
+              />
+              <div
+                *ngIf="
+                  loginForm.touched && loginForm.hasError('required', 'name')
+                "
+                class="text-danger"
+              >
+                Name is required
+              </div>
+              <div
+                *ngIf="
+                  loginForm.touched && loginForm.hasError('pattern', 'name')
+                "
+                class="text-danger"
+              >
+                Name field allows only characters
+              </div>
+            </div>
+            <!-- Email -->
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                placeholder="abc@gmail.com"
+                name="email"
+                class="form-control"
+                autocomplete="off"
+                formControlName="email"
+              />
+              <div
+                *ngIf="
+                  loginForm.touched && loginForm.hasError('required', 'email')
+                "
+                class="text-danger"
+              >
+                Email is required
+              </div>
+              <div
+                *ngIf="
+                  loginForm.touched && loginForm.hasError('email', 'email')
+                "
+                class="text-danger"
+              >
+                Email must be valid email address
+              </div>
+            </div>
+
+            <!-- password -->
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                placeholder="enter password"
+                class="form-control"
+                formControlName="password"
+              />
+              <div
+                *ngIf="
+                  loginForm.touched &&
+                  loginForm.hasError('required', 'password')
+                "
+                class="text-danger"
+              >
+                password is required
+              </div>
+              <div
+                *ngIf="
+                  loginForm.touched && loginForm.hasError('pattern', 'password')
+                "
+                class="text-danger"
+              >
+                <ul style="padding: 0; list-style: inside">
+                  <li>Password should be between 8-16 characters</li>
+                  <li>
+                    Password should contain both lowercase and uppercase
+                    alphabets
+                  </li>
+                  <li>Password should contain at least one special symbol</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- populate data -->
+            <div class="row form-group">
+              <input
+                type="button"
+                value="populate"
+                class="btn btn-primary col-lg-3"
+                (click)="populateData()"
+              />
+              <input
+                type="button"
+                value="clear"
+                class="btn btn-warning col-lg-3"
+                (click)="clear()"
+              />
+              <input
+                type="submit"
+                value="login"
+                class="btn btn-success col-lg-3"
+                [disabled]="!loginForm.valid"
+              />
+            </div>
+          </form>
+          <div class="card card-body bg-primary text-white">
+            <div *ngIf="loginForm.value.name != ''">
+              {{ loginForm.value | json }}
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+</html>

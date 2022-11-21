@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">Contacts List</mat-toolbar>
+<mat-list>
+  <mat-list-item *ngFor="let Contact of contacts">
+    <mat-divider></mat-divider>
+
+    <div (click)="contactClicked(Contact)">
+      <img mat-list-avatar src="{{ Contact.Image }}" class="circle" />
+      <h3 mat-line>{{ Contact.firstname }}</h3>
+    </div>
+  </mat-list-item>
+</mat-list>
+<!-- {{ contacts | json }} -->

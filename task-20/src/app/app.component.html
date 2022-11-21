@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container col-md-5 col-lg-6">
+      <form class="cantainer font-weight-bold mx-auto text-light">
+        <div class="container bg-dark my-4">
+          <div class="text-light text-center">
+            <h1 class="font-weight-bold">Project metadata</h1>
+          </div>
+          <!-- group -->
+          <section class="form-group">
+            <label for="number1">Group:</label>
+            <input
+              type="text"
+              name="group"
+              autocomplete="off"
+              class="form-control"
+              placeholder="enter group "
+              [(ngModel)]="group"
+            />
+          </section>
+
+          <!-- artifact -->
+          <section class="form-group">
+            <label for="number2">Artifact:</label>
+            <input
+              type="text"
+              name="artifact"
+              autocomplete="off"
+              class="form-control"
+              placeholder="enter artifact "
+              [(ngModel)]="artifact"
+            />
+          </section>
+          <!-- name -->
+          <section class="form-group">
+            <label for="number3">Name:</label>
+            <input
+              type="text"
+              name="name"
+              autocomplete="off"
+              class="form-control"
+              placeholder="enter name "
+              value="{{ artifact }}"
+            />
+          </section>
+
+          <!-- description -->
+          <section class="form-group">
+            <label for="number4">Description:</label>
+            <input
+              type="text"
+              name="dec"
+              autocomplete="off"
+              class="form-control"
+              placeholder="enter description"
+              [(ngModel)]="dec"
+            />
+          </section>
+          <!-- pakage -->
+          <section class="form-group">
+            <label for="number5">Pakage Name:</label>
+            <input
+              type="text"
+              name="package"
+              autocomplete="off"
+              class="form-control"
+              placeholder="enter package"
+              [(ngModel)]="package"
+              value="com.example.{{ artifact }}"
+              (keyup)="updateData()"
+            />
+          </section>
+          <!-- button -->
+
+          <section class="form-group mx-auto">
+            <input
+              type="button"
+              class="btn btn-block bg-primary text-uppercase text-light"
+              value="done"
+              (click)="jsonData()"
+            />
+          </section>
+
+        </div>
+      </form>
+
+      
+    </div>
+  </body>
+</html>

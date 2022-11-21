@@ -1,0 +1,28 @@
+body{
+    background-color: #444;
+}
+
+.header{
+    border: solid 1px black;
+    background-color: #f542d4;
+    padding: 10px;
+    color: black;
+}
+.main{
+   
+    background-color:white;
+    padding: 10px;  
+    text-align: left;
+}
+.sidebar{
+    background-color:#f542d4;
+    
+}
+.footer{
+    background-color: white;
+    border: dashed 1px;
+}
+.headingtag{
+   
+    padding-left: 900px;
+}

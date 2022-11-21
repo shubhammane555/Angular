@@ -1,0 +1,16 @@
+.footer{
+    background-color: rgb(92, 20, 207);
+  
+}
+.copy{
+    background-color:rgb(105, 105, 192);
+}
+ul#horizontal-list {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+	}
+	ul#horizontal-list li {
+		display: inline;
+        
+	}

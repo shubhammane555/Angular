@@ -1,0 +1,38 @@
+<!-- <p>contacts-list works!</p>
+<mat-toolbar color="primary">Contacts List</mat-toolbar>
+<mat-list>
+  <mat-list-item *ngFor="let Contact of contacts; trackBy: trackByContactId">
+    <mat-divider></mat-divider>
+
+    <div (click)="contactClicked(Contact)">
+      <img mat-list-avatar src="{{ Contact.Image }}" class="circle" />
+      <h3 mat-line>{{ Contact.firstname }}</h3>
+    </div>
+  </mat-list-item>
+</mat-list> -->
+{{ contacts | json }}
+<mat-toolbar color="primary"
+  >Contacts
+  <input
+    type="text"
+    placeholder="search"
+    style="margin-left: 50px"
+    input="search($event.traget.value)"
+  />
+</mat-toolbar>
+
+<mat-list>
+  <a
+    href="contacts/{{ contact.id }}"
+    mat-list-item
+    *ngFor="let contact of contacts | async"
+  >
+    <img
+      mat-list-avatar
+      [src]="contact.Image"
+      alt="Picture of {{ contact.firstname }}"
+      class="circle"
+    />
+    <h3 mat-line>{{ contact.firstname }}</h3>
+  </a>
+</mat-list>

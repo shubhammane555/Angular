@@ -1,0 +1,390 @@
+<div class="he card mb-5">
+  <img
+    class="card-img-top"
+    src="https://d3ljlx3hzhder.cloudfront.net/sprink/b2c_assets/images/trial-page-banner.png"
+    height="200px"
+    width="50px"
+    alt="Card image cap"
+  />
+  <div class="card-body">
+    <h5 class="card-title text-warning mt-4 font-weight-bold">
+      Trial Meal plans
+    </h5>
+    <div class="dl conatiner row">
+      <div class="col-6">
+        <a class="text-dark" (click)="dinner()"><b>Dinner</b></a>
+      </div>
+      <div class="col-6">
+        <a class="text-dark" (click)="lunch()"><b>lunch</b></a>
+      </div>
+    </div>
+
+    <div class="" id="dinnerpage" *ngIf="showdinner">
+      <div class="container">
+        <div class="d-md-flex mb-3">
+          <p class="mr-3 mb-0">
+            <img
+              src="https://d3ljlx3hzhder.cloudfront.net/sprink/b2c_assets/images/dinner_time.png"
+              class="delivery_time"
+            />
+            <span class="font-weight-normal f-13"
+              >Dinner cut-off timings-12:00 pm (Today)
+              <i
+                class="fa fa-info-circle text-muted example-popover"
+                data-content="Cut-off timings is referred to a time after which an order 
+                      can not be placed."
+                data-html="true"
+                data-toggle="popover"
+                data-trigger="hover"
+                data-placement="bottom"
+                data-original-title=""
+                title=""
+              ></i>
+            </span>
+          </p>
+          <span class="text-success font-weight-normal mt-md-n1 f-13">
+            <img
+              class="d-none d-md-inline-block w-25"
+              src="https://d3ljlx3hzhder.cloudfront.net/sprink/b2c_assets/images/car.png"
+              alt=""
+            />
+            <img
+              class="d-md-none"
+              width="35"
+              src="https://d3ljlx3hzhder.cloudfront.net/sprink/b2c_assets/images/car.png"
+              alt=""
+            />
+
+            FREE Delivery
+          </span>
+          <p class="mr-3 mb-0">
+            <img
+              src="https://d3ljlx3hzhder.cloudfront.net/sprink/b2c_assets/images/lunch_time.png"
+              class="delivery_time"
+            />
+            <span class="font-weight-normal f-13"
+              >Standard Dinner delivery: 06:30 pm - 08:30 pm</span
+            >
+          </p>
+        </div>
+      </div>
+      <!-- dinner -->
+      <!-- item1 -->
+      <div class="r1 row">
+        <div class="d1 col-3">
+          <div class="card" style="width: 14rem">
+            <img
+              class="card-img-top"
+              src="{{ imageSrc }}"
+              width="250"
+              height="150"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                <img
+                  src="https://d3ljlx3hzhder.cloudfront.net/sprink/common_assets/images/veg_icon.png"
+                  alt="icon"
+                  class="veg_nonveg_icon"
+                />North Indian Standard(veg)
+              </h5>
+              <p class="card-text font-weight-normal f-11 meal_price">
+                ₹180.00
+              </p>
+
+              <a href="#" class="btn btn-primary">Try Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- item2 -->
+        <div class="d2 col-3">
+          <div class="card" style="width: 14rem">
+            <img
+              class="card-img-top"
+              src="{{ imageSrc1 }}"
+              width="250"
+              height="150"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                <img
+                  src="https://d3ljlx3hzhder.cloudfront.net/sprink/common_assets/images/veg_icon.png"
+                  alt="icon"
+                  class="veg_nonveg_icon"
+                />North Indian Standard(veg)
+              </h5>
+              <p class="card-text font-weight-normal f-11 meal_price">
+                ₹180.00
+              </p>
+
+              <a href="#" class="btn btn-primary">Try Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- item3 -->
+        <div class="d3 col-3">
+          <div class="card" style="width: 14rem">
+            <img
+              class="card-img-top"
+              src="{{ imageSrc3 }}"
+              width="250"
+              height="150"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                <img
+                  src="https://d3ljlx3hzhder.cloudfront.net/sprink/common_assets/images/veg_icon.png"
+                  alt="icon"
+                  class="veg_nonveg_icon"
+                />North Indian Standard(veg)
+              </h5>
+              <p class="card-text font-weight-normal f-11 meal_price">
+                ₹180.00
+              </p>
+
+              <a href="#" class="btn btn-primary">Try Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- ********** -->
+        <!-- item4 -->
+        <div class="r2 row">
+          <div class="d4 col-3">
+            <div class="card" style="width: 14rem">
+              <img
+                class="card-img-top"
+                src="{{ imageSrc }}"
+                width="250"
+                height="150"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <img
+                    src="https://d3ljlx3hzhder.cloudfront.net/sprink/common_assets/images/veg_icon.png"
+                    alt="icon"
+                    class="veg_nonveg_icon"
+                  />North Indian Standard(veg)
+                </h5>
+                <p class="card-text font-weight-normal f-11 meal_price">
+                  ₹180.00
+                </p>
+
+                <a href="#" class="btn btn-primary">Try Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- item5 -->
+          <div class="d5 col-3">
+            <div class="card" style="width: 14rem">
+              <img
+                class="card-img-top"
+                src="{{ imageSrc1 }}"
+                width="250"
+                height="150"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <img
+                    src="https://d3ljlx3hzhder.cloudfront.net/sprink/common_assets/images/veg_icon.png"
+                    alt="icon"
+                    class="veg_nonveg_icon"
+                  />North Indian Standard(veg)
+                </h5>
+                <p class="card-text font-weight-normal f-11 meal_price">
+                  ₹180.00
+                </p>
+
+                <a href="#" class="btn btn-primary">Try Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- item6 -->
+          <div class="d6 col-3">
+            <div class="card" style="width: 14rem">
+              <img
+                class="card-img-top"
+                src="{{ imageSrc3 }}"
+                width="250"
+                height="150"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <img
+                    src="https://d3ljlx3hzhder.cloudfront.net/sprink/common_assets/images/veg_icon.png"
+                    alt="icon"
+                    class="veg_nonveg_icon"
+                  />North Indian Standard(veg)
+                </h5>
+                <p class="card-text font-weight-normal f-11 meal_price">
+                  ₹180.00
+                </p>
+
+                <a href="#" class="btn btn-primary">Try Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ****** -->
+        </div>
+        <p class="card-text">
+          <small class="text-muted">
+            You can change food preferences, select multi cuisine preferences,
+            and even skip days with 'pause' feature in your subscription after
+            purchase.</small
+          >
+        </p>
+      </div>
+    </div>
+    <!-- ************************************** -->
+    <!-- lunch -->
+    <div class="" id="lunchpage" *ngIf="showlunch">
+      <div class="d-md-flex mb-3">
+        <p class="mr-3 mb-0">
+          <img
+            src="https://d3ljlx3hzhder.cloudfront.net/sprink/b2c_assets/images/lunch_time.png"
+            class="delivery_time"
+          />
+          <span class="font-weight-normal f-13"
+            >Standard Lunch delivery: 11:30 am - 01:30 pm</span
+          >
+        </p>
+        <p class="mr-3 mb-0">
+          <img
+            src="https://d3ljlx3hzhder.cloudfront.net/sprink/b2c_assets/images/dinner_time.png"
+            class="delivery_time"
+          />
+          <span class="font-weight-normal f-13"
+            >Lunch cut-off timings-06:00 am (Yesterday)
+            <i
+              class="fa fa-info-circle text-muted example-popover"
+              data-content="Cut-off timings is referred to a time after which an order 
+                    can not be placed."
+              data-html="true"
+              data-toggle="popover"
+              data-trigger="hover"
+              data-placement="bottom"
+              data-original-title=""
+              title=""
+            ></i>
+          </span>
+        </p>
+        <span class="text-success font-weight-normal mt-md-n1 f-13">
+          <img
+            class="d-none d-md-inline-block w-25"
+            src="https://d3ljlx3hzhder.cloudfront.net/sprink/b2c_assets/images/car.png"
+            alt=""
+          />
+          <img
+            class="d-md-none"
+            width="35"
+            src="https://d3ljlx3hzhder.cloudfront.net/sprink/b2c_assets/images/car.png"
+            alt=""
+          />
+
+          FREE Delivery
+        </span>
+      </div>
+
+      <!-- item1 -->
+      <div class="row">
+        <div class="item1 col-3">
+          <div class="card" style="width: 14rem">
+            <img
+              class="card-img-top"
+              src="{{ imageSrc }}"
+              width="250"
+              height="150"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                <img
+                  src="https://d3ljlx3hzhder.cloudfront.net/sprink/common_assets/images/veg_icon.png"
+                  alt="icon"
+                  class="veg_nonveg_icon"
+                />North Indian Standard(veg)
+              </h5>
+              <p class="card-text font-weight-normal f-11 meal_price">
+                ₹180.00
+              </p>
+
+              <a href="#" class="btn btn-primary">Try Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- item2 -->
+        <div class="item2 col-3">
+          <div class="card" style="width: 14rem">
+            <img
+              class="card-img-top"
+              src="{{ imageSrc1 }}"
+              width="250"
+              height="150"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                <img
+                  src="https://d3ljlx3hzhder.cloudfront.net/sprink/common_assets/images/veg_icon.png"
+                  alt="icon"
+                  class="veg_nonveg_icon"
+                />North Indian Standard(veg)
+              </h5>
+              <p class="card-text font-weight-normal f-11 meal_price">
+                ₹180.00
+              </p>
+
+              <a href="#" class="btn btn-primary">Try Now</a>
+            </div>
+          </div>
+        </div>
+        &nbsp;
+
+        <!-- item3 -->
+        <div class="item3 col-3">
+          <div class="card" style="width: 14rem">
+            <img
+              class="card-img-top"
+              src="{{ imageSrc2 }}"
+              width="250"
+              height="150"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                <img
+                  src="https://d3ljlx3hzhder.cloudfront.net/sprink/common_assets/images/veg_icon.png"
+                  alt="icon"
+                  class="veg_nonveg_icon"
+                />North Indian Standard(veg)
+              </h5>
+              <p class="card-text font-weight-normal f-11 meal_price">
+                ₹180.00
+              </p>
+
+              <a href="#" class="btn btn-primary">Try Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="card-text">
+        <small class="text-muted">
+          You can change food preferences, select multi cuisine preferences, and
+          even skip days with 'pause' feature in your subscription after
+          purchase.</small
+        >
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<h1>welcome user</h1>
+
+<div class="container">
+  <p>{{ count }}</p>
+  <br />
+  <button (click)="Increment()">Increment</button>
+  <button (click)="Decrement()">Decrement</button>
+</div>
+
+<input type="text" [(ngModel)]="somevalue" /><br />
+<b>{{ somevalue }}</b>
+
+<app-child></app-child>

@@ -1,0 +1,47 @@
+<!-- <div class="" id="fundpage" *ngIf="showfund"> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="fluid-container">
+      <nav class="navbar navbar-dark bg-primary">
+        <div>
+          <h1 class="text-center">USER DETAILS</h1>
+        </div>
+      </nav>
+    </div>
+
+    <table id="customers">
+      <thead>
+        <th>Account No</th>
+        <th>IFSC Code</th>
+        <th>Amount</th>
+        <th>Procced</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" name="accno" /></td>
+          <td><input type="text" name="ifsc" /></td>
+          <td><input type="text" name="amt" /></td>
+          <td><button>Pay</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+<app-fundtransfer></app-fundtransfer>
+
+<!-- </div> -->

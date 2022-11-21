@@ -1,0 +1,85 @@
+<form #contactForm="ngForm" (ngSubmit)="save(contactForm)">
+  <div class="card" style="width: 50%; margin: 8rem auto">
+    <div class="card-body">
+      <div class="text-center">
+        <img
+          class="card-img-top rounded-circle"
+          style="height: 200px; width: 200px"
+          src="{{ contact.Image }}"
+          alt="Contact image cap"
+        />
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Street</th>
+            <th scope="col">Zip Code</th>
+            <th scope="col">City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">
+              <input
+                type="text"
+                name="id"
+                readonly
+                [(ngModel)]="contact.id"
+                placeholder="{{ contact.id }}"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                [(ngModel)]="contact.firstname"
+                name="name"
+                class="form-control"
+                placeholder="{{ contact.firstname }}"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                [(ngModel)]="contact.lastname"
+                name="email"
+                class="form-control"
+                placeholder="{{ contact.lastname }}"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                [(ngModel)]="contact.street"
+                name="street"
+                class="form-control"
+                placeholder="{{ contact.street }}"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                [(ngModel)]="contact.zip"
+                name="zip"
+                class="form-control"
+                placeholder="{{ contact.zip }}"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                [(ngModel)]="contact.city"
+                name="city"
+                class="form-control"
+                placeholder="{{ contact.city }}"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button type="submit" class="btn btn-primary m-2">Save</button>
+  </div>
+</form>
